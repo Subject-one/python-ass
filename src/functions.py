@@ -1,3 +1,7 @@
-# Manual Option For Dinner Plan
-def dinner_plan_m():
+# # Manual Option For Dinner Plan
+# def d_man():
     
+
+# # Random Option Dinner Plan
+# def d_rand():
+     

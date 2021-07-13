@@ -1,5 +1,13 @@
+import os
+from datetime import datetime
+from items import sides
 
-welcome_user()
-create_plan()
-choose_option()
+today = datetime.now()
+print(today.strftime("Date: %a, %d %B, %y"))
+print(today.strftime("Time: %I:%M:%S %p"))
+
+
+# print(sides)
+
+
 
