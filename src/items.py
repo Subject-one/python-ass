@@ -171,31 +171,31 @@ sauces = {
 }
 
 drinks = {
-    "" : {
-        "Price" : 3.00,
-        "Serving Size(g)" : 50,
-        "Carbs(g)" : 18,
-        "Protein(g)" : 6,
-        "Fat(g)" : 0.6,
-        "Calories" : 104,
-    },
-
-    "" : {
-        "Price" : 1.00,
-        "Serving Size(g)" : 20,
-        "Carbs(g)" : 5.2,
-        "Protein(g)" : 0,
+    "Coke" : {
+        "Price" : 2.00,
+        "Serving Size(ml)" : 375,
+        "Carbs(g)" : 40,
+        "Sugar(g)" : 40,
         "Fat(g)" : 0,
-        "Calories" : 24,
+        "Calories" : 161,
     },
 
-    "" : {
-        "Price" : 4.00,
-        "Serving Size(g)" : 50,
-        "Carbs(g)" : 4.3,
-        "Protein(g)" : 4.2,
-        "Fat(g)" : 8,
-        "Calories" : 110,
+    "Coke Zero" : {
+        "Price" : 2.00,
+        "Serving Size(ml)" : 375,
+        "Carbs(g)" : 0,
+        "Sugar(g)" : 0,
+        "Fat(g)" : 0,
+        "Calories" : 1,
+    },
+
+    "Solo" : {
+        "Price" : 2.00,
+        "Serving Size(ml)" : 375,
+        "Carbs(g)" : 45.8,
+        "Sugar(g)" : 45.4,
+        "Fat(g)" : 0,
+        "Calories" : 179,
     }
 }
 
