@@ -18,7 +18,7 @@ def lets_go():
     except ValueError:
         input("Put some letters in bro: ")
     
-
+    
 # Manual Option For Dinner Plan
 def dp_man(): 
     item_selection = []
@@ -81,6 +81,13 @@ def total_calories(menu_selection, item_selection):
     for index, menu in enumerate(dict_list):
         calories_list.append(menu[menu_selection[index]][item_selection[index]]["Calories(g)"])
     return sum(calories_list)
+
+def total_serve(menu_selection, item_selection):
+    dict_list = [mains, sides]
+    serve_list = []
+    for index, menu in enumerate(dict_list):
+        serve_list.append(menu[menu_selection[index]][item_selection[index]]["Serving Size(g)"])
+    return sum(serve_list)
    
 
 
