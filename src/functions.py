@@ -3,7 +3,6 @@ from time import sleep
 from items import mains, sides, sauces, drinks
 from simple_term_menu import TerminalMenu
 
-
 # Take away option
 
 #Add note for CRTL-C quit
@@ -19,8 +18,6 @@ def lets_go():
     except ValueError:
         input("Put some letters in bro: ")
     
-
-
 
 # Manual Option For Dinner Plan
 def dp_man(): 
@@ -63,6 +60,27 @@ def total_carbs(menu_selection, item_selection):
     for index, menu in enumerate(dict_list):
         carb_list.append(menu[menu_selection[index]][item_selection[index]]["Carbs(g)"])
     return sum(carb_list)
+
+def total_protein(menu_selection, item_selection):
+    dict_list = [mains, sides]
+    protein_list = []
+    for index, menu in enumerate(dict_list):
+        protein_list.append(menu[menu_selection[index]][item_selection[index]]["Protein(g)"])
+    return sum(protein_list)
+
+def total_fat(menu_selection, item_selection):
+    dict_list = [mains, sides]
+    fat_list = []
+    for index, menu in enumerate(dict_list):
+        fat_list.append(menu[menu_selection[index]][item_selection[index]]["Fat(g)"])
+    return sum(fat_list)
+
+def total_calories(menu_selection, item_selection):
+    dict_list = [mains, sides]
+    calories_list = []
+    for index, menu in enumerate(dict_list):
+        calories_list.append(menu[menu_selection[index]][item_selection[index]]["Calories(g)"])
+    return sum(calories_list)
    
 
 
@@ -89,6 +107,13 @@ def exit_prog():
     os.system("clear")
     exit()
     
+
+
+
+
+
+
+
 # Random Option Dinner Plan
 # def dp_rand():
 #     print("Generating a randomised meal plan...")
