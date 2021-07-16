@@ -78,18 +78,29 @@ mains = {
     },
 
     "Tofu": {
-        "Price": 6.00,
-        "Serving Size(g)": 120,
-        "Carbs(g)": 5.5,
-        "Protein(g)": 15.5,
-        "Fat(g)": 12,
-        "Calories": 177,
+        "Fried": {
+            "Price": 6.00,
+            "Serving Size(g)": 120,
+            "Carbs(g)": 8.5,
+            "Protein(g)": 16.5,
+            "Fat(g)": 15,
+            "Calories": 223,
+        },
+
+        "Fresh": {
+            "Price": 4.00,
+            "Serving Size(g)": 120,
+            "Carbs(g)": 5.5,
+            "Protein(g)": 15.5,
+            "Fat(g)": 12,
+            "Calories": 177,
+        }
     }
 }
 
 sides = {
     "Potato": {
-        "Baked, Whole, sour cream, bacon and spring onion": {
+        "Baked, sour cream & bacon": {
             "Price": 4.00,
             "Serving Size(g)": 150,
             "Carbs(g)": 20,
@@ -139,68 +150,76 @@ sides = {
 }
 
 sauces = {
-    "Mushroom": {
-        "Price": 3.00,
-        "Serving Size(g)": 50,
-        "Carbs(g)": 18,
-        "Protein(g)": 6,
-        "Fat(g)": 0.6,
-        "Calories": 104,
+    "Creamy": {
+        "Mushroom": {
+            "Price": 3.00,
+            "Serving Size(g)": 50,
+            "Carbs(g)": 18,
+            "Protein(g)": 6,
+            "Fat(g)": 0.6,
+            "Calories": 104,
+        }
     },
 
-    "Tomato": {
-        "Price": 1.00,
-        "Serving Size(g)": 20,
-        "Carbs(g)": 5.2,
-        "Protein(g)": 0,
-        "Fat(g)": 0,
-        "Calories": 24,
-    },
+    "Savory": {
+        "Tomato": {
+            "Price": 1.00,
+            "Serving Size(g)": 20,
+            "Carbs(g)": 5.2,
+            "Protein(g)": 0,
+            "Fat(g)": 0,
+            "Calories": 24,
+        },
 
-    "Cheese": {
-        "Price": 4.00,
-        "Serving Size(g)": 50,
-        "Carbs(g)": 4.3,
-        "Protein(g)": 4.2,
-        "Fat(g)": 8,
-        "Calories": 110,
+        "Cheese": {
+            "Price": 4.00,
+            "Serving Size(g)": 50,
+            "Carbs(g)": 4.3,
+            "Protein(g)": 4.2,
+            "Fat(g)": 8,
+            "Calories": 110,
+        }
     }
 }
 
 drinks = {
-    "Coke": {
-        "Price": 2.00,
-        "Serving Size(ml)": 375,
-        "Carbs(g)": 40,
-        "Sugar(g)": 40,
-        "Fat(g)": 0,
-        "Calories": 161,
+    "Soft Drink": {
+        "Coke": {
+            "Price": 2.00,
+            "Serving Size(ml)": 375,
+            "Carbs(g)": 40,
+            "Sugar(g)": 40,
+            "Fat(g)": 0,
+            "Calories": 161,
+        },
+
+
+        "Coke Zero": {
+            "Price": 2.00,
+            "Serving Size(ml)": 375,
+            "Carbs(g)": 0,
+            "Sugar(g)": 0,
+            "Fat(g)": 0,
+            "Calories": 1,
+        },
+
+        "Solo": {
+            "Price": 2.00,
+            "Serving Size(ml)": 375,
+            "Carbs(g)": 45.8,
+            "Sugar(g)": 45.4,
+            "Fat(g)": 0,
+            "Calories": 179,
+        }
     },
 
-    "Coke Zero": {
-        "Price": 2.00,
-        "Serving Size(ml)": 375,
-        "Carbs(g)": 0,
-        "Sugar(g)": 0,
-        "Fat(g)": 0,
-        "Calories": 1,
-    },
-
-    "Solo": {
-        "Price": 2.00,
-        "Serving Size(ml)": 375,
-        "Carbs(g)": 45.8,
-        "Sugar(g)": 45.4,
-        "Fat(g)": 0,
-        "Calories": 179,
-    },
-
-    "Water": {
-        "Price": 0,
-        "Serving Size(ml)": 375,
-        "Carbs(g)": 0,
-        "Sugar(g)": 0,
-        "Fat(g)": 0,
-        "Calories": 0,
+    "Healthy Option"
+        "Water": {
+            "Price": 0,
+            "Serving Size(ml)": 375,
+            "Carbs(g)": 0,
+            "Sugar(g)": 0,
+            "Fat(g)": 0,
+            "Calories": 0,
+        }
     }
-}

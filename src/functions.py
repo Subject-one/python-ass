@@ -3,9 +3,10 @@ from time import sleep
 from items import mains, sides, sauces, drinks
 from simple_term_menu import TerminalMenu
 
-# Take away option
+# Nice to have (if time permits): 
+# Take-away menu
+# CTRL-C to quit
 
-#Add note for CRTL-C quit
 # Start application
 def lets_go():
     user_name = []
@@ -15,21 +16,34 @@ def lets_go():
     Type -help for addtional information.""")
     try:
         input("Enter your name to proceed: ")
+        return user_name
     except ValueError:
-        input("Put some letters in bro: ")
+        input("Please enter your name: ")
+        return user_name
     
-    
-# Manual Option For Dinner Plan
+
+# dp_man = Dinner Plan Manual
 def dp_man(): 
     item_selection = []
     menu_selection = []
-    print("Manual Mode. Let's Build!")
+    print("Manual Mode Selected.\nLet's Build a Dinner Plan!")
     main_c = [*mains.keys()]
     main_c.append("quit")
     user_choice = show_choices(main_c, "Please choose a Main Dish")
     if user_choice == "Steak":
         menu_selection.append("Steak")
         item_selection.append(get_choice("Steak", mains))
+        main_c = [*mains.keys()]
+    elif user_choice == "Chicken":
+        menu_selection.append("Chicken")
+        item_selection.append(get_choice("Chicken", mains))
+    elif user_choice == "Fish":
+        menu_selection.append("Fish")
+        item_selection.append(get_choice("Fish", mains))
+    elif user_choice == "Tofu":
+        menu_selection.append("Tofu")
+        item_selection.append(get_choice("Tofu", mains))
+    
     # print(item_selection)
     # elif user_choice == "Chicken":
     sides_c = [*sides.keys()]
@@ -38,6 +52,23 @@ def dp_man():
     if user_choice == "Potato":
         menu_selection.append("Potato")
         item_selection.append(get_choice("Potato", sides))
+    elif user_choice == "Healthy Vegetables":
+        menu_selection.append("Healthy Vegetables")
+        item_selection.append(get_choice("Healthy Vegetables", sides))
+    
+    sauces_c = [*sauces.keys()]
+    sauces_c.append("quit")
+    user_choice = show_choices(sauces_c, "Please choose a sauce")
+    if user_choice == "Mushroom":
+        menu_selection.append("Mushroom")
+        item_selection.append(get_choice("Mushroom", sauces))
+    elif user_choice == "Chicken":
+        menu_selection.append("Chicken")
+        item_selection.append(get_choice("Chicken", sauces))
+    elif user_choice == "Fish":
+        menu_selection.append("Fish")
+        item_selection.append(get_choice("Fish", sauces))
+
     # print(item_selection)
     # y/n do you want to restart dp_man()
     print(menu_selection)
