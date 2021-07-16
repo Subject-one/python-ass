@@ -11,22 +11,25 @@ from simple_term_menu import TerminalMenu
 # Start application
 def lets_go():
     os.system("clear")
-    user_name = []
-    print("|==============================|")
-    print("|PLEASE READ BEFORE CONTINUING!|")
-    print("|==============================|")
-
+    print("|=========================================|")
+    print("|      PLEASE READ BEFORE CONTINUING!     |")
+    print("|=========================================|\n")
     print("""Welcome to the Meal Planner.
 Follow the prompts to build your meal.
-Type -help for additional information.\n
-You must use the arrow keys to navigate.\n""")
+! Type -help for additional information.\n
+! You must use the arrow keys to navigate.\n
+! Type -Q to leave the application.\n""")
     sleep(2)
-    try:
-        input("Enter your name to proceed: ")
-        return user_name
-    except ValueError:
-        input("Please enter your name: ")
-        return user_name
+    user_name = input("Please type your name: ")
+    if user_name == "-Q":
+        exit_prog()
+    if user_name == "-q":
+        exit_prog()
+    else:
+        print(f"Welcome, {user_name}. Let's build a meal plan!")
+    sleep(1)
+        
+
 
 # Random Option Dinner Plan
 # def dp_rand():
@@ -46,11 +49,11 @@ You must use the arrow keys to navigate.\n""")
 # Dinner Plan Manual
 
 def dp_man():
-    print("Now Loading...")
+    print("Now Loading...\n")
     sleep(1)
-    print("|==================================================|")
-    print("|             Launching Manual Mode                |")
-    print("|==================================================|")
+    print("|==========================================|")
+    print("|          Launching Manual Mode           |")
+    print("|==========================================|")
     sleep(2)
 
     item_selection = []
