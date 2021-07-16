@@ -14,6 +14,7 @@ def lets_go():
     Follow the prompts to build your meal.
     You can stop running this program by typing 'exit' at any point.
     Type -help for addtional information.""")
+    sleep(2)
     try:
         input("Enter your name to proceed: ")
         return user_name
@@ -23,7 +24,10 @@ def lets_go():
     
 
 # dp_man = Dinner Plan Manual
-def dp_man(): 
+def dp_man():
+    sleep(1)
+    print("Now Loading....")
+    sleep(1)
     item_selection = []
     menu_selection = []
     print("Manual Mode Selected.\nLet's Build a Dinner Plan!")
@@ -140,8 +144,14 @@ def get_choice(choice, menu):
     return show_choices(choice_list, f"{choice}")
 
 def exit_prog():
-    print("Thanks for using my shit")
+    print("Thank's for using my app.\nNow closing....")
     sleep(2)
+    print("3")
+    sleep(1)
+    print("2")
+    sleep(1)
+    print("1")
+    sleep(1)
     os.system("clear")
     exit()
     
