@@ -29,15 +29,24 @@ def set_user():
     elif user_name == "-q":
         exit_prog()
     else:
-        print(f"\nYou look great today, {user_name}.\nLet's Build a Meal together!\n")
+        print(f"\nYou look great today, {user_name.capitalize()}.\nLet's Build a Meal together!\n")
     sleep(1)
 
 # Option Selector 
 def user_selector():
     user_option = input("Manual or Random Dinner Plan Builder?(manual/random):\n")
     if user_option == "random":
+        print("\nPlease wait while I generate you something delicious...\n")
+        sleep(2)
+        print("Oh! You are going to enjoy this dinner plan!\n")
+        sleep(2)
         dp_rand()
     elif user_option == "Random":
+        sleep(1)
+        print("\nPlease wait while I generate you something delicious...\n")
+        sleep(1)
+        print("Oh! You are going to enjoy this dinner plan!\n")
+        sleep(1)
         dp_rand()
     elif user_option == "manual":
         dp_man()
@@ -48,8 +57,8 @@ def user_selector():
     elif user_option == "-q":
         exit_prog()
     else:
-        print("You didn't specifiy 'random or manual'")
-        return user_option 
+        print("\nYou didn't specify 'random or manual'\n")
+        return user_selector()
 
 # Random Option Dinner Plan
 def dp_rand():
@@ -93,8 +102,8 @@ def dp_rand():
 
 # Dinner Plan Manual
 def dp_man():
-    print("Now Loading...\n")
-    sleep(1)
+    print("\nNow Loading...\n")
+    sleep(2)
     print("|==========================================|")
     print("|          Launching Manual Mode           |")
     print("|==========================================|")
@@ -155,7 +164,7 @@ def dp_man():
         item_selection.append(get_choice("Healthy Option", drinks))
 
     # print(menu_selection)
-    print("The Dinner Plan for tonight is: ")
+    print("*Each amount is per person.\nLet's see what's for dinner tonight:\n ")
     print(item_selection)
     # print(mains[menu_selection[0]][item_selection[0]]["Price"])
     # print(sides[menu_selection[1]][item_selection[1]]["Price"])
