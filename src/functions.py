@@ -23,13 +23,13 @@ Follow the prompts to build your meal.
 
 # Set Username / Exit Program
 def set_user():
-    user_name = input("Please type your name: ")
+    user_name = input("Enter a command(-help, -q). Enter your name to start.")
     if user_name == "-Q":
         exit_prog()
     elif user_name == "-q":
         exit_prog()
     else:
-        print(f"Welcome, {user_name}.\n")
+        print(f"Welcome, {user_name}. Let's Build a Meal!\n")
     sleep(1)
 
 # Option Selector 

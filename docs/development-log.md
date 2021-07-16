@@ -1,6 +1,37 @@
+# Status Update 2.0
 
-Status Update 1.0
 ========================
+
+#### Andrew Adamopoulos
+
+### 17/07/2021 - 1.50am
+
+--------------------------
+
+## Issues and Road Blocks
+
+**1.** Structure of the code has faults. ***Solved***<br>
+
+> **1.1** Resolved the faults surrounding the code body. No further issues found
+in code body or structure. Scopes now sit proper.
+
+## Implementing Features
+
+
+
+## Testing Application
+
+
+
+
+
+
+
+
+
+
+
+# Status Update 1.0
 
 #### Andrew Adamopoulos
 
@@ -33,4 +64,3 @@ Status Update 1.0
 **3.** Bug testing spreadsheet is being filled in periodically.<br>
 
 **4.** Trello is up and running.
-
