@@ -32,7 +32,7 @@ def dp_man():
     menu_selection = []
     print("Manual Mode Selected.\nLet's Build a Dinner Plan!")
     main_c = [*mains.keys()]
-    main_c.append("quit")
+    main_c.append("Quit")
     user_choice = show_choices(main_c, "Please choose a Main Dish")
     if user_choice == "Steak":
         menu_selection.append("Steak")
@@ -51,7 +51,7 @@ def dp_man():
     # print(item_selection)
     # elif user_choice == "Chicken":
     sides_c = [*sides.keys()]
-    sides_c.append("quit")
+    sides_c.append("Quit")
     user_choice = show_choices(sides_c, "Please choose a Side Dish")
     if user_choice == "Potato":
         menu_selection.append("Potato")
@@ -61,17 +61,26 @@ def dp_man():
         item_selection.append(get_choice("Healthy Vegetables", sides))
     
     sauces_c = [*sauces.keys()]
-    sauces_c.append("quit")
+    sauces_c.append("Quit")
     user_choice = show_choices(sauces_c, "Please choose a sauce")
-    if user_choice == "Mushroom":
-        menu_selection.append("Mushroom")
-        item_selection.append(get_choice("Mushroom", sauces))
-    elif user_choice == "Chicken":
-        menu_selection.append("Chicken")
-        item_selection.append(get_choice("Chicken", sauces))
-    elif user_choice == "Fish":
-        menu_selection.append("Fish")
-        item_selection.append(get_choice("Fish", sauces))
+    if user_choice == "Creamy":
+        menu_selection.append("Creamy")
+        item_selection.append(get_choice("Creamy", sauces))
+    elif user_choice == "Savory":
+        menu_selection.append("Savory")
+        item_selection.append(get_choice("Savory", sauces))
+
+
+    drinks_c = [*drinks.keys()]
+    drinks_c.append("Quit")
+    user_choice = show_choices(drinks_c, "Please choose a drink")
+    if user_choice == "Soft Drink":
+        menu_selection.append("Soft Drink")
+        item_selection.append(get_choice("Soft Drink", drinks))
+    elif user_choice == "Healthy Option":
+        menu_selection.append("Healthy Option")
+        item_selection.append(get_choice("Healthy Option", drinks))
+
 
     # print(item_selection)
     # y/n do you want to restart dp_man()
@@ -140,17 +149,17 @@ def show_choices(choice_list, menu):
 
 def get_choice(choice, menu):
     choice_list = [*menu[f"{choice}"].keys()]
-    choice_list.append("quit")
+    choice_list.append("Quit")
     return show_choices(choice_list, f"{choice}")
 
 def exit_prog():
-    print("Thank's for using my app.\nNow closing....")
-    sleep(2)
-    print("3")
+    print("See you again soon!\nNow Closing App...")
     sleep(1)
-    print("2")
+    print("3...")
     sleep(1)
-    print("1")
+    print("2...")
+    sleep(1)
+    print("1...")
     sleep(1)
     os.system("clear")
     exit()

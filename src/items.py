@@ -213,7 +213,7 @@ drinks = {
         }
     },
 
-    "Healthy Option"
+    "Healthy Option": {
         "Water": {
             "Price": 0,
             "Serving Size(ml)": 375,
@@ -223,3 +223,4 @@ drinks = {
             "Calories": 0,
         }
     }
+}
