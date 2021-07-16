@@ -2,11 +2,11 @@ import os
 from time import sleep
 from items import mains, sides, sauces, drinks
 from simple_term_menu import TerminalMenu
+import random
 
 # Nice to have (if time permits): 
 # Take-away menu
-# CTRL-C to quit
- # y/n do you want to restart dp_man()
+# y/n do you want to restart dp_man()
 
 # Start application
 def lets_go():
@@ -18,9 +18,10 @@ def lets_go():
 Follow the prompts to build your meal.
 ! Type -help for additional information.\n
 ! You must use the arrow keys to navigate.\n
-! Type -Q to leave the application.\n""")
+! Type -q to leave the application.\n""")
     sleep(2)
 
+# Set Username / Exit Program
 def set_user():
     user_name = input("Please type your name: ")
     if user_name == "-Q":
@@ -28,26 +29,60 @@ def set_user():
     elif user_name == "-q":
         exit_prog()
     else:
-        print(f"Welcome, {user_name}. Let's build a meal plan!")
+        print(f"Welcome, {user_name}.\n")
     sleep(1)
 
 # Option Selector 
-def user_option():
-    input("Manual or Random Dinner Plan Builder?(manual/random): ")
-    if user_option != "random" or "manual":
-        input("You need to specify 'manual' or 'random': ")
-        return
-    elif user_option == "manual":
-        dp_man()
-    elif user_option == "random":
-        dp_rand()
+# def user_selector():
+#     user_option = input("Manual or Random Dinner Plan Builder?(manual/random): ")
+#     if user_option == "random" or "manual":
+
+    # elif user_option == "manual":
+    #     dp_man()
+    # #elif user_option == "random":
+    #     #dp_rand()
+    # input("You need to specify 'manual' or 'random': ")
+    # return
 
 # Random Option Dinner Plan
-# def dp_rand():
-#     print("Generating a randomised meal plan...")
+def dp_rand():
+    item_selection = []
+    menu_selection = []
 
-# User option
+    main_c = [*mains.keys()]
+    r_choice = random.choice(main_c)
+    menu_selection.append(r_choice)
+    r_list = [*mains[f"{r_choice}"].keys()]
+    r_choice = random.choice(r_list)
+    item_selection.append(r_choice)
 
+    sides_c = [*sides.keys()]
+    r_choice = random.choice(sides_c)
+    menu_selection.append(r_choice)
+    r_list = [*sides[f"{r_choice}"].keys()]
+    r_choice = random.choice(r_list)
+    item_selection.append(r_choice)
+
+    sauces_c = [*sauces.keys()]
+    r_choice = random.choice(sauces_c)
+    menu_selection.append(r_choice)
+    r_list = [*sauces[f"{r_choice}"].keys()]
+    r_choice = random.choice(r_list)
+    item_selection.append(r_choice)
+
+    drinks_c = [*drinks.keys()]
+    r_choice = random.choice(drinks_c)
+    menu_selection.append(r_choice)
+    r_list = [*drinks[f"{r_choice}"].keys()]
+    r_choice = random.choice(r_list)
+    item_selection.append(r_choice)
+
+    print(item_selection)
+    print("Total Cost:$", total_cost(menu_selection, item_selection))
+    print("Total Carbs: ", total_carbs(menu_selection, item_selection),"(g)")
+    print("Total Protein: ", total_protein(menu_selection, item_selection),"(g)")
+    print("Total Calories: ", total_calories(menu_selection, item_selection), "(cal)")
+    print("Total Serving Size: ", total_serve(menu_selection, item_selection), "(g)")
 
 # Dinner Plan Manual
 def dp_man():
@@ -117,7 +152,7 @@ def dp_man():
     print(item_selection)
     # print(mains[menu_selection[0]][item_selection[0]]["Price"])
     # print(sides[menu_selection[1]][item_selection[1]]["Price"])
-    print("Total Cost:$", total_cost(menu_selection, item_selection))
+    print("Total Cost: $", total_cost(menu_selection, item_selection))
     print("Total Carbs: ", total_carbs(menu_selection, item_selection),"(g)")
     print("Total Protein: ", total_protein(menu_selection, item_selection),"(g)")
     print("Total Calories: ", total_calories(menu_selection, item_selection), "(cal)")
