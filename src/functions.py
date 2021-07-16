@@ -20,34 +20,36 @@ Follow the prompts to build your meal.
 ! You must use the arrow keys to navigate.\n
 ! Type -Q to leave the application.\n""")
     sleep(2)
+
+def set_user():
     user_name = input("Please type your name: ")
     if user_name == "-Q":
         exit_prog()
-    if user_name == "-q":
+    elif user_name == "-q":
         exit_prog()
     else:
         print(f"Welcome, {user_name}. Let's build a meal plan!")
     sleep(1)
-        
 
+# Option Selector 
+def user_option():
+    input("Manual or Random Dinner Plan Builder?(manual/random): ")
+    if user_option != "random" or "manual":
+        input("You need to specify 'manual' or 'random': ")
+        return
+    elif user_option == "manual":
+        dp_man()
+    elif user_option == "random":
+        dp_rand()
 
 # Random Option Dinner Plan
 # def dp_rand():
 #     print("Generating a randomised meal plan...")
 
 # User option
-# def user_option():
-#     input("Manual or Random Dinner Plan Builder?(manual/random): ")
-#     if user_option != "random" or "manual":
-#         input("You need to specify 'manual' or 'random': ")
-#         return
-#     elif user_option == "manual":
-#         dp_man()
-#     elif user_option == "random":
-#         dp_rand()
+
 
 # Dinner Plan Manual
-
 def dp_man():
     print("Now Loading...\n")
     sleep(1)
@@ -190,7 +192,7 @@ def get_choice(choice, menu):
 
 # Exit Message when 'Quit' selected. Clears terminal
 def exit_prog():
-    print("See you again soon!\nNow Closing App...")
+    print(f"See you again soon!\nNow Closing App...")
     sleep(1)
     print("3...")
     sleep(1)
