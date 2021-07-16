@@ -15,34 +15,41 @@ def lets_go():
     print("|      PLEASE READ BEFORE CONTINUING!     |")
     print("|=========================================|\n")
     print("""Welcome to the Meal Planner.
-Follow the prompts to build your meal.
-! Type -help for additional information.\n
+Follow the prompts to build your meal.\n
 ! You must use the arrow keys to navigate.\n
-! Type -q to leave the application.\n""")
+! Type -help for additional information.\n
+! Type -q to quit the application.\n""")
     sleep(2)
 
 # Set Username / Exit Program
 def set_user():
-    user_name = input("Enter a command(-help, -q). Enter your name to start.")
+    user_name = input("Enter a command(-help, -q) OR Enter your name to start:\n")
     if user_name == "-Q":
         exit_prog()
     elif user_name == "-q":
         exit_prog()
     else:
-        print(f"Welcome, {user_name}. Let's Build a Meal!\n")
+        print(f"\nYou look great today, {user_name}.\nLet's Build a Meal together!\n")
     sleep(1)
 
 # Option Selector 
-# def user_selector():
-#     user_option = input("Manual or Random Dinner Plan Builder?(manual/random): ")
-#     if user_option == "random" or "manual":
-
-    # elif user_option == "manual":
-    #     dp_man()
-    # #elif user_option == "random":
-    #     #dp_rand()
-    # input("You need to specify 'manual' or 'random': ")
-    # return
+def user_selector():
+    user_option = input("Manual or Random Dinner Plan Builder?(manual/random):\n")
+    if user_option == "random":
+        dp_rand()
+    elif user_option == "Random":
+        dp_rand()
+    elif user_option == "manual":
+        dp_man()
+    elif user_option == "Manual":
+        dp_man()
+    elif user_option == "-Q":
+        exit_prog()
+    elif user_option == "-q":
+        exit_prog()
+    else:
+        print("You didn't specifiy 'random or manual'")
+        return user_option 
 
 # Random Option Dinner Plan
 def dp_rand():
