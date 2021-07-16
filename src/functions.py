@@ -6,14 +6,20 @@ from simple_term_menu import TerminalMenu
 # Nice to have (if time permits): 
 # Take-away menu
 # CTRL-C to quit
+ # y/n do you want to restart dp_man()
 
 # Start application
 def lets_go():
+    os.system("clear")
     user_name = []
+    print("|==============================|")
+    print("|PLEASE READ BEFORE CONTINUING!|")
+    print("|==============================|")
+
     print("""Welcome to the Meal Planner.
-    Follow the prompts to build your meal.
-    You can stop running this program by typing 'exit' at any point.
-    Type -help for addtional information.""")
+Follow the prompts to build your meal.
+Type -help for additional information.\n
+You must use the arrow keys to navigate.\n""")
     sleep(2)
     try:
         input("Enter your name to proceed: ")
@@ -21,16 +27,36 @@ def lets_go():
     except ValueError:
         input("Please enter your name: ")
         return user_name
-    
 
-# dp_man = Dinner Plan Manual
+# Random Option Dinner Plan
+# def dp_rand():
+#     print("Generating a randomised meal plan...")
+
+# User option
+# def user_option():
+#     input("Manual or Random Dinner Plan Builder?(manual/random): ")
+#     if user_option != "random" or "manual":
+#         input("You need to specify 'manual' or 'random': ")
+#         return
+#     elif user_option == "manual":
+#         dp_man()
+#     elif user_option == "random":
+#         dp_rand()
+
+# Dinner Plan Manual
+
 def dp_man():
+    print("Now Loading...")
     sleep(1)
-    print("Now Loading....")
-    sleep(1)
+    print("|==================================================|")
+    print("|             Launching Manual Mode                |")
+    print("|==================================================|")
+    sleep(2)
+
     item_selection = []
     menu_selection = []
-    print("Manual Mode Selected.\nLet's Build a Dinner Plan!")
+
+    # Selecting Mains
     main_c = [*mains.keys()]
     main_c.append("Quit")
     user_choice = show_choices(main_c, "Please choose a Main Dish")
@@ -48,8 +74,7 @@ def dp_man():
         menu_selection.append("Tofu")
         item_selection.append(get_choice("Tofu", mains))
     
-    # print(item_selection)
-    # elif user_choice == "Chicken":
+    # Selecting Sides
     sides_c = [*sides.keys()]
     sides_c.append("Quit")
     user_choice = show_choices(sides_c, "Please choose a Side Dish")
@@ -60,6 +85,7 @@ def dp_man():
         menu_selection.append("Healthy Vegetables")
         item_selection.append(get_choice("Healthy Vegetables", sides))
     
+    # Selecting Sauces
     sauces_c = [*sauces.keys()]
     sauces_c.append("Quit")
     user_choice = show_choices(sauces_c, "Please choose a sauce")
@@ -70,7 +96,7 @@ def dp_man():
         menu_selection.append("Savory")
         item_selection.append(get_choice("Savory", sauces))
 
-
+    # Selecting Drinks
     drinks_c = [*drinks.keys()]
     drinks_c.append("Quit")
     user_choice = show_choices(drinks_c, "Please choose a drink")
@@ -81,60 +107,66 @@ def dp_man():
         menu_selection.append("Healthy Option")
         item_selection.append(get_choice("Healthy Option", drinks))
 
-
-    # print(item_selection)
-    # y/n do you want to restart dp_man()
-    print(menu_selection)
+    # print(menu_selection)
+    print("The Dinner Plan for tonight is: ")
     print(item_selection)
     # print(mains[menu_selection[0]][item_selection[0]]["Price"])
     # print(sides[menu_selection[1]][item_selection[1]]["Price"])
-    print(total_cost(menu_selection, item_selection))
-    print(total_carbs(menu_selection, item_selection))
+    print("Total Cost:$", total_cost(menu_selection, item_selection))
+    print("Total Carbs: ", total_carbs(menu_selection, item_selection),"(g)")
+    print("Total Protein: ", total_protein(menu_selection, item_selection),"(g)")
+    print("Total Calories: ", total_calories(menu_selection, item_selection), "(cal)")
+    print("Total Serving Size: ", total_serve(menu_selection, item_selection), "(g)")
 
+# Total cost of all items in the meal
 def total_cost(menu_selection, item_selection):
-    dict_list = [mains, sides]
+    dict_list = [mains, sides, sauces, drinks]
     price_list = []
     for index, menu in enumerate(dict_list):
         price_list.append(menu[menu_selection[index]][item_selection[index]]["Price"])
     return sum(price_list)
 
+# Total carbs of all items in the meal
 def total_carbs(menu_selection, item_selection):
-    dict_list = [mains, sides]
+    dict_list = [mains, sides, sauces, drinks]
     carb_list = []
     for index, menu in enumerate(dict_list):
         carb_list.append(menu[menu_selection[index]][item_selection[index]]["Carbs(g)"])
     return sum(carb_list)
 
+# Total protein of all items in the meal
 def total_protein(menu_selection, item_selection):
-    dict_list = [mains, sides]
+    dict_list = [mains, sides, sauces]
     protein_list = []
     for index, menu in enumerate(dict_list):
         protein_list.append(menu[menu_selection[index]][item_selection[index]]["Protein(g)"])
     return sum(protein_list)
 
+# Total fat of all items in the meal
 def total_fat(menu_selection, item_selection):
-    dict_list = [mains, sides]
+    dict_list = [mains, sides, sauces, drinks]
     fat_list = []
     for index, menu in enumerate(dict_list):
         fat_list.append(menu[menu_selection[index]][item_selection[index]]["Fat(g)"])
     return sum(fat_list)
 
+# Total calories of all items in the meal
 def total_calories(menu_selection, item_selection):
-    dict_list = [mains, sides]
+    dict_list = [mains, sides, sauces, drinks]
     calories_list = []
     for index, menu in enumerate(dict_list):
-        calories_list.append(menu[menu_selection[index]][item_selection[index]]["Calories(g)"])
+        calories_list.append(menu[menu_selection[index]][item_selection[index]]["Calories"])
     return sum(calories_list)
 
+# Total serving size of all items in the meal
 def total_serve(menu_selection, item_selection):
-    dict_list = [mains, sides]
+    dict_list = [mains, sides, sauces]
     serve_list = []
     for index, menu in enumerate(dict_list):
         serve_list.append(menu[menu_selection[index]][item_selection[index]]["Serving Size(g)"])
     return sum(serve_list)
    
-
-
+# Arrow list choice selector
 def show_choices(choice_list, menu):
     os.system("clear")
     try:
@@ -147,11 +179,13 @@ def show_choices(choice_list, menu):
     except TypeError:
         exit_prog()
 
+# Shows which list
 def get_choice(choice, menu):
     choice_list = [*menu[f"{choice}"].keys()]
     choice_list.append("Quit")
     return show_choices(choice_list, f"{choice}")
 
+# Exit Message when 'Quit' selected. Clears terminal
 def exit_prog():
     print("See you again soon!\nNow Closing App...")
     sleep(1)
@@ -171,17 +205,3 @@ def exit_prog():
 
 
 
-# Random Option Dinner Plan
-# def dp_rand():
-#     print("Generating a randomised meal plan...")
-
-# User option
-# def user_option():
-#     input("Manual or Random Dinner Plan Builder?(manual/random): ")
-#     if user_option != "random" or "manual":
-#         input("You need to specify 'manual' or 'random': ")
-#         return
-#     elif user_option == "manual":
-#         dp_man()
-#     elif user_option == "random":
-#         dp_rand()

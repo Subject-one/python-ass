@@ -1,6 +1,6 @@
 mains = {
     "Steak": {
-        "Eye Fillet": {
+        "Eye Fillet Steak": {
             "Price": 30.00,
             "Serving Size(g)": 200,
             "Carbs(g)": 0,
@@ -9,7 +9,7 @@ mains = {
             "Calories": 480,
         },
 
-        "Scotch Fillet": {
+        "Scotch Fillet Steak": {
             "Price": 25.00,
             "Serving Size(g)": 300,
             "Carbs(g)": 0,
@@ -18,7 +18,7 @@ mains = {
             "Calories": 847,
         },
 
-        "Flat Iron": {
+        "Flat Iron Steak": {
             "Price": 25.00,
             "Serving Size(g)": 250,
             "Carbs(g)": 0,
@@ -29,7 +29,7 @@ mains = {
     },
 
     "Chicken": {
-        "Breast": {
+        "Chicken Breast": {
             "Price": 8.00,
             "Serving Size(g)": 100,
             "Carbs(g)": 0,
@@ -38,7 +38,7 @@ mains = {
             "Calories": 284,
         },
 
-        "Thigh": {
+        "Chicken Thigh": {
             "Price": 11.00,
             "Serving Size(g)": 100,
             "Carbs(g)": 0,
@@ -78,7 +78,7 @@ mains = {
     },
 
     "Tofu": {
-        "Fried": {
+        "Fried Tofu": {
             "Price": 6.00,
             "Serving Size(g)": 120,
             "Carbs(g)": 8.5,
@@ -87,7 +87,7 @@ mains = {
             "Calories": 223,
         },
 
-        "Fresh": {
+        "Mapo Tofu": {
             "Price": 4.00,
             "Serving Size(g)": 120,
             "Carbs(g)": 5.5,
@@ -100,7 +100,7 @@ mains = {
 
 sides = {
     "Potato": {
-        "Baked, sour cream & bacon": {
+        "Baked Potato": {
             "Price": 4.00,
             "Serving Size(g)": 150,
             "Carbs(g)": 20,
@@ -120,7 +120,7 @@ sides = {
     },
 
     "Healthy Vegetables": {
-        "Mushroom": {
+        "Grilled Mushrooms": {
             "Price": 1.00,
             "Serving Size(g)": 100,
             "Carbs(g)": 3,
@@ -129,7 +129,7 @@ sides = {
             "Calories": 22,
         },
 
-        "Capsicum": {
+        "Sauted Capsicum": {
             "Price": 3.00,
             "Serving Size(g)": 50,
             "Carbs(g)": 3,
@@ -138,7 +138,7 @@ sides = {
             "Calories": 15,
         },
 
-        "Broccoli": {
+        "Steamed Broccoli": {
             "Price": 2.00,
             "Serving Size(g)": 100,
             "Carbs(g)": 7,
@@ -151,7 +151,7 @@ sides = {
 
 sauces = {
     "Creamy": {
-        "Mushroom": {
+        "Mushroom Sauce": {
             "Price": 3.00,
             "Serving Size(g)": 50,
             "Carbs(g)": 18,
@@ -162,7 +162,7 @@ sauces = {
     },
 
     "Savory": {
-        "Tomato": {
+        "Tomato Sauce": {
             "Price": 1.00,
             "Serving Size(g)": 20,
             "Carbs(g)": 5.2,
@@ -171,7 +171,7 @@ sauces = {
             "Calories": 24,
         },
 
-        "Cheese": {
+        "Hot Cheese Sauce": {
             "Price": 4.00,
             "Serving Size(g)": 50,
             "Carbs(g)": 4.3,
@@ -186,17 +186,14 @@ drinks = {
     "Soft Drink": {
         "Coke": {
             "Price": 2.00,
-            "Serving Size(ml)": 375,
             "Carbs(g)": 40,
             "Sugar(g)": 40,
             "Fat(g)": 0,
             "Calories": 161,
         },
 
-
         "Coke Zero": {
             "Price": 2.00,
-            "Serving Size(ml)": 375,
             "Carbs(g)": 0,
             "Sugar(g)": 0,
             "Fat(g)": 0,
@@ -205,7 +202,6 @@ drinks = {
 
         "Solo": {
             "Price": 2.00,
-            "Serving Size(ml)": 375,
             "Carbs(g)": 45.8,
             "Sugar(g)": 45.4,
             "Fat(g)": 0,
@@ -216,7 +212,6 @@ drinks = {
     "Healthy Option": {
         "Water": {
             "Price": 0,
-            "Serving Size(ml)": 375,
             "Carbs(g)": 0,
             "Sugar(g)": 0,
             "Fat(g)": 0,
