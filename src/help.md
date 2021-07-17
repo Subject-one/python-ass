@@ -8,7 +8,6 @@ You must type the following command in the terminal window to give yourself acce
 
 ## Here are some helpful commands you can use:
 
-
 > '-help' To see this screen
 
 > '-q' terminate the application

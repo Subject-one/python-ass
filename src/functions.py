@@ -19,14 +19,13 @@ def lets_go():
     print("""Welcome to the Meal Planner.
 Follow the prompts to build your meal.\n
 ! You must use the arrow keys to navigate.\n
-! Type -help for additional information.\n
 ! Type -q to quit the application.\n""")
     sleep(2)
 
 # Set Username / Exit Program
 def set_user():
     try:
-        user_name = input("Enter a command(-help, -q) OR Enter your name to start:\n")
+        user_name = input("Enter your name to start:\n")
     except KeyboardInterrupt:
         exit_prog()
     if user_name == "-Q":

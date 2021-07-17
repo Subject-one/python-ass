@@ -1,7 +1,6 @@
-import os
 from sys import argv
 from datetime import datetime
-from functions import dp_man, dp_rand, lets_go, set_user, user_selector
+from functions import dp_rand, lets_go, set_user, user_selector
 
 print(argv)
 if "--random" in argv:
