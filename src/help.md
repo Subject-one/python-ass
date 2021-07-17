@@ -21,7 +21,7 @@ You must type the following command in the terminal window to give yourself acce
 ## Useful tips
 
 - The name you enter can be anything.
-- If you select manual build, you must use the arrow keys to navigate.
+- Manual build -> Navigate with arrow keys, select choice with 'Enter' key.
 - Each serving size is per person.
 
 ## What is this App?

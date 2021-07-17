@@ -18,7 +18,8 @@ def lets_go():
     print("|=========================================|\n")
     print("""Welcome to the Meal Planner.
 Follow the prompts to build your meal.\n
-! You must use the arrow keys to navigate.\n
+! Manual Mode: You must use the arrow keys to navigate.\n
+! Manual Mode: Select choice with 'Enter' key.
 ! Type -q to quit the application.\n""")
     sleep(2)
 
