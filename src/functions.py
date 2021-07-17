@@ -8,6 +8,8 @@ import random
 # Take-away menu
 # y/n do you want to restart dp_man()
 
+# MEAL PLANNER
+
 # Start application
 def lets_go():
     os.system("clear")
@@ -23,7 +25,10 @@ Follow the prompts to build your meal.\n
 
 # Set Username / Exit Program
 def set_user():
-    user_name = input("Enter a command(-help, -q) OR Enter your name to start:\n")
+    try:
+        user_name = input("Enter a command(-help, -q) OR Enter your name to start:\n")
+    except KeyboardInterrupt:
+        exit_prog()
     if user_name == "-Q":
         exit_prog()
     elif user_name == "-q":
@@ -34,30 +39,22 @@ def set_user():
 
 # Option Selector 
 def user_selector():
-    user_option = input("Manual or Random Dinner Plan Builder?(manual/random):\n")
-    if user_option == "random":
-        print("\nPlease wait while I generate you something delicious...\n")
-        sleep(2)
-        print("Oh! You are going to enjoy this dinner plan!\n")
-        sleep(2)
-        dp_rand()
-    elif user_option == "Random":
-        sleep(1)
-        print("\nPlease wait while I generate you something delicious...\n")
-        sleep(1)
-        print("Oh! You are going to enjoy this dinner plan!\n")
-        sleep(1)
-        dp_rand()
-    elif user_option == "manual":
-        dp_man()
-    elif user_option == "Manual":
-        dp_man()
-    elif user_option == "-Q":
+    try:
+        user_option = input("Manual or Random Dinner Plan Builder?(-m/-r):\n")
+    except KeyboardInterrupt:
         exit_prog()
-    elif user_option == "-q":
+    if user_option == "-R" or user_option == "-r":
+        print("\nPlease wait while I generate you something delicious...\n")
+        sleep(2)
+        print("Oh! You are going to enjoy this dinner plan!\n")
+        sleep(2)
+        dp_rand()
+    elif user_option == "-M" or user_option == "-m":
+        dp_man()
+    elif user_option == "-Q" or user_option == "-q":
         exit_prog()
     else:
-        print("\nYou didn't specify 'random or manual'\n")
+        print("\nYou didn't specify '-m' or '-r'\n")
         return user_selector()
 
 # Random Option Dinner Plan
@@ -235,7 +232,7 @@ def show_choices(choice_list, menu):
     except TypeError:
         exit_prog()
 
-# Shows which list
+# Shows list
 def get_choice(choice, menu):
     choice_list = [*menu[f"{choice}"].keys()]
     choice_list.append("Quit")
