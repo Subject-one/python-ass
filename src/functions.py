@@ -17,10 +17,10 @@ import random
 def lets_go():
     os.system("clear")
     print("|=========================================|")
-    print("|      PLEASE READ BEFORE CONTINUING!     |")
+    print("|!!!!!!PLEASE READ BEFORE CONTINUING!!!!!!|")
     print("|=========================================|\n")
     print("""Welcome to the Meal Planner.
-Follow the prompts to build your meal.\n
+FOLLOW the prompts to build your meal.\n
 ! Manual Mode: You must use the arrow keys to navigate.
 ! Manual Mode: Select choice with the 'Enter' key.\n
 ! Type -q to quit the application.\n
