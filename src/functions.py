@@ -45,21 +45,21 @@ def set_user():
 def user_selector():
     try:
         user_option = input("Manual or Random Dinner Plan Builder?(-m/-r):\n")
+        if user_option == "-R" or user_option == "-r":
+            print("\nPlease wait while I generate you something delicious...\n")
+            sleep(2)
+            print("Oh! You are going to enjoy this dinner plan!\n")
+            sleep(2)
+            dp_rand()
+        elif user_option == "-M" or user_option == "-m":
+            dp_man()
+        elif user_option == "-Q" or user_option == "-q":
+            exit_prog()
+        else:
+            print("\nYou didn't specify '-m' or '-r'\n")
+            return user_selector()
     except KeyboardInterrupt:
         exit_prog()
-    if user_option == "-R" or user_option == "-r":
-        print("\nPlease wait while I generate you something delicious...\n")
-        sleep(2)
-        print("Oh! You are going to enjoy this dinner plan!\n")
-        sleep(2)
-        dp_rand()
-    elif user_option == "-M" or user_option == "-m":
-        dp_man()
-    elif user_option == "-Q" or user_option == "-q":
-        exit_prog()
-    else:
-        print("\nYou didn't specify '-m' or '-r'\n")
-        return user_selector()
 
 # Random Option Dinner Plan
 def dp_rand():
