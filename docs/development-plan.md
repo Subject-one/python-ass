@@ -24,7 +24,7 @@ With this app, it will give the user a pleasent experience of being able to spen
 <br>
 
 Dinner Planner takes steps to ensure it can produce a quality product for the user.
-It also aims to produce a higher quality user experience, away from the basic instant load times that terminal normally offers.
+It also aims to produce a higher quality user experience, away from the basic instant load times that terminal normally offers and building a dinner plan either manually with the user or completely at random.
 
 <br>
 
@@ -96,7 +96,7 @@ Print Choices:
 
 ------------
 
-![Terminal Input Command](/docs/flow.PNG "User name")
+![Flow Chart](/docs/flow.png "Diagram")
 
 ------------
 
