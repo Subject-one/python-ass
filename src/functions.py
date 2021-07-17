@@ -23,7 +23,8 @@ def lets_go():
 Follow the prompts to build your meal.\n
 ! Manual Mode: You must use the arrow keys to navigate.
 ! Manual Mode: Select choice with the 'Enter' key.\n
-! Type -q to quit the application.\n""")
+! Type -q to quit the application.\n
+! You can end at any time with 'CTRL-C'\n""")
     sleep(2)
 
 # Set Username / Exit Program
@@ -92,13 +93,26 @@ def dp_rand():
     r_list = [*drinks[f"{r_choice}"].keys()]
     r_choice = random.choice(r_list)
     item_selection.append(r_choice)
-
+    
+    os.system("clear")
+    print("Fun Fact: Serving Size = Per Person!\n")
+    sleep(2)
+    print("The Dinner Plan for tonight is:\n ")
+    sleep(1)
     print(item_selection)
+    sleep(1)
     print("Total Cost:$", total_cost(menu_selection, item_selection))
+    sleep(1)
     print("Total Carbs: ", total_carbs(menu_selection, item_selection),"(g)")
+    sleep(1)
     print("Total Protein: ", total_protein(menu_selection, item_selection),"(g)")
+    sleep(1)
     print("Total Calories: ", total_calories(menu_selection, item_selection), "(cal)")
+    sleep(1)
     print("Total Serving Size: ", total_serve(menu_selection, item_selection), "(g)")
+    print("\nI hope you enjoyed using Dinner Planner.\nUse me daily for new ideas!\n")
+    print("This application has been designed in accordance article 1.1 of your stomachs needs.\n")
+    print("Reminder: To generate a quick random meal, './mealplanner.sh --random' from your terminal! ")
 
 # Dinner Plan Manual
 def dp_man():
@@ -163,16 +177,28 @@ def dp_man():
         menu_selection.append("Healthy Option")
         item_selection.append(get_choice("Healthy Option", drinks))
 
-    # print(menu_selection)
-    print("*Each amount is per person.\nLet's see what's for dinner tonight:\n ")
+    # Print the totals for each macro & cost, items
+    print("Loading...\n")
+    sleep(1)
+    os.system("clear")
+    print("Fun Fact: Serving Size = Per Person!\n")
+    sleep(2)
+    print("The Dinner Plan for tonight is:\n ")
+    sleep(1)
     print(item_selection)
-    # print(mains[menu_selection[0]][item_selection[0]]["Price"])
-    # print(sides[menu_selection[1]][item_selection[1]]["Price"])
     print("Total Cost: $", total_cost(menu_selection, item_selection))
+    sleep(1)
     print("Total Carbs: ", total_carbs(menu_selection, item_selection),"(g)")
+    sleep(1)
     print("Total Protein: ", total_protein(menu_selection, item_selection),"(g)")
+    sleep(1)
     print("Total Calories: ", total_calories(menu_selection, item_selection), "(cal)")
+    sleep(1)
     print("Total Serving Size: ", total_serve(menu_selection, item_selection), "(g)")
+    sleep(1)
+    print("\nI hope you enjoyed using Dinner Planner.\nUse me daily for new ideas!\n")
+    print("This application has been designed in accordance article 1.1 of your stomachs needs.\n")
+    print("Reminder: To generate a quick random meal, './mealplanner.sh --random' from your terminal! ")
 
 # Total cost of all items in the meal
 def total_cost(menu_selection, item_selection):
