@@ -17,7 +17,7 @@ You must type the following command in the terminal window to give yourself acce
 
 > '-m' initiate a manual meal build
 
-> '--random' skips the process to just give random meal
+> './mealplanner.sh --random' skips the process to just give random meal
 
 ## Useful tips
 
