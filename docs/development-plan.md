@@ -1,3 +1,7 @@
+### Andrew Adamopoulos
+------------
+<br>
+
 # Software Development Plan
 
 ## **Application Purpose**
@@ -92,7 +96,7 @@ Print Choices:
 
 ------------
 
-![Terminal Input Command](/docs/end.PNG "User name")
+![Terminal Input Command](/docs/flow.PNG "User name")
 
 ------------
 
@@ -112,4 +116,5 @@ Update 2
 
 ------------
 
-![Test Spreadsheet](/docs/testingsc.PNG "Test")
+![Spreadsheet](/docs/testingsc.PNG "Test")
+
