@@ -118,3 +118,15 @@ Update 2
 
 ![Spreadsheet](/docs/testingsc.PNG "Test")
 
+
+
+
+------------
+
+## **Links**
+
+------------
+
+[Trello Board](https://trello.com/b/JmWQIprP/terminal-app)
+
+[Github](https://github.com/Subject-one/python-ass)
