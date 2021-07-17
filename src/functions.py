@@ -4,11 +4,14 @@ from items import mains, sides, sauces, drinks
 from simple_term_menu import TerminalMenu
 import random
 
-# Nice to have (if time permits): 
-# Take-away menu
-# y/n do you want to restart dp_man()
+# Future Developments: 
+# Take-away option
+# y/n do you want to restart
+# Ingredients list
+# Print from terminal option
 
 # MEAL PLANNER
+# BUILD 1.0
 
 # Start application
 def lets_go():
@@ -250,11 +253,5 @@ def exit_prog():
     sleep(1)
     os.system("clear")
     exit()
-    
 
-
-
-
-
-
-
+# END OF BUILD 1.0
